@@ -14,6 +14,10 @@ export function Icon({
 }: IconProps) {
   const IconComponent = listIconsConstant[name];
 
+  if (!IconComponent) {
+    return null;
+  }
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <IconComponent strokeWidth={strokeWidth} size={size} {...props} />

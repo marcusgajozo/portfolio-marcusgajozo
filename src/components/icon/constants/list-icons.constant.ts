@@ -31,5 +31,14 @@ export const listIconsConstant = {
       default: SunIcon,
     })),
   ),
+  github: lazy(() =>
+    import("raster-react").then(({ GithubIcon }) => ({
+      default: GithubIcon,
+    })),
+  ),
+  linkedin: lazy(() =>
+    import("raster-react").then(({ LinkedinIcon }) => ({
+      default: LinkedinIcon,
+    })),
+  ),
 } as const;
-// import { Heart } from 'raster-react';
