@@ -14,9 +14,9 @@ importers:
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      pixelarticons:
-        specifier: ^2.0.2
-        version: 2.0.2(react@19.2.4)
+      raster-react:
+        specifier: ^0.2.0
+        version: 0.2.0(react@19.2.4)
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -1660,12 +1660,6 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
-  pixelarticons@2.0.2:
-    resolution: {integrity: sha512-/BlUJp9oRv2hx0ELy2+X8R2khnAvzztUmYuu7KfHZSQNDc09PTK0BxDl9+AYE7qVNupE/12Z/89iz7joYDHYDw==}
-    hasBin: true
-    peerDependencies:
-      react: '>=16'
-
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
@@ -1691,6 +1685,11 @@ packages:
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  raster-react@0.2.0:
+    resolution: {integrity: sha512-Lp0qDHfKIfXXYiNSOIZilh6pLV3TwJWNWNuRFpYM4/acIJfKJhoE+lRsvCSefLaQ56EQ6JJFLRVV/n1jbQJSEw==}
+    peerDependencies:
+      react: '>=16.8.0'
 
   react-dom@19.2.4:
     resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
@@ -3677,10 +3676,6 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  pixelarticons@2.0.2(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-
   possible-typed-array-names@1.1.0: {}
 
   postcss@8.4.31:
@@ -3706,6 +3701,10 @@ snapshots:
   punycode@2.3.1: {}
 
   queue-microtask@1.2.3: {}
+
+  raster-react@0.2.0(react@19.2.4):
+    dependencies:
+      react: 19.2.4
 
   react-dom@19.2.4(react@19.2.4):
     dependencies:
