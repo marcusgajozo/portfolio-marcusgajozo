@@ -41,4 +41,14 @@ export const listIconsConstant = {
       default: LinkedinIcon,
     })),
   ),
+  "user-fill": lazy(() =>
+    import("raster-react").then(({ UserFillIcon }) => ({
+      default: UserFillIcon,
+    })),
+  ),
+  thunder: lazy(() =>
+    import("raster-react").then(({ ThunderIcon }) => ({
+      default: ThunderIcon,
+    })),
+  ),
 } as const;
