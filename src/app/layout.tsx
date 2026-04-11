@@ -1,23 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jersey_10 } from "next/font/google";
-import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
+import type { Metadata } from "next";
+import { Roboto_Mono } from "next/font/google";
+import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin-ext"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
-});
-
-const jersey10 = Jersey_10({
-  variable: "--font-jersey-10",
-  subsets: ["latin"],
-  weight: ["400"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -33,14 +23,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${jersey10.variable} h-full antialiased`}
+      className={`${robotoMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="h-screen flex flex-col">
         <ThemeProvider>
           <main className="h-full flex-1 flex">
             <Sidebar />
-            <section className="flex-1">{children}</section>
+            <section className="flex-1 overflow-y-auto">{children}</section>
           </main>
         </ThemeProvider>
       </body>
