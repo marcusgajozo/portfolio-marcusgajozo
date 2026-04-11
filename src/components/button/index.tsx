@@ -19,7 +19,7 @@ export function Button({
           ? "bg-blue-500 text-white"
           : variant === "secondary"
             ? "bg-gray-500 text-white"
-            : "bg-transparent text-blue-500"
+            : "bg-transparent"
       }`}
       {...props}
     >
