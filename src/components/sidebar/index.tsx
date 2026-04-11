@@ -1,9 +1,6 @@
-"use client";
-
-import { useTheme } from "next-themes";
 import { PublicRoutes } from "@/enums/routes";
 import { MenuItem, MenuItemProps } from "./components/menu-item";
-import { Button } from "../button";
+import { ToogleTheme } from "./components/toggle-theme";
 
 const listMenu: MenuItemProps[] = [
   { name: "Home", iconName: "home", url: PublicRoutes.Home },
@@ -13,16 +10,12 @@ const listMenu: MenuItemProps[] = [
 ];
 
 export function Sidebar() {
-  const { resolvedTheme, setTheme } = useTheme();
-
-  const handleToggleTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
-  };
-
   return (
-    <nav className="h-full relative">
-      <Button variant="ghost" iconName="moon" onClick={handleToggleTheme} />
-      <ul className="flex flex-col items-center justify-center gap-10 h-full">
+    <nav className="h-full flex items-center justify-center relative">
+      <div className="absolute top-2">
+        <ToogleTheme />
+      </div>
+      <ul className="flex flex-col items-center gap-10">
         {listMenu.map((item, index) => (
           <li key={`${item.name}-menu-item-${index}`}>
             <MenuItem
