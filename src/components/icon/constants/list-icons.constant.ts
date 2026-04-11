@@ -2,28 +2,34 @@ import { lazy } from "react";
 
 export const listIconsConstant = {
   home: lazy(() =>
-    import("pixelarticons/react").then(({ Home }) => ({
-      default: Home,
+    import("raster-react").then(({ HomeIcon }) => ({
+      default: HomeIcon,
     })),
   ),
   folder: lazy(() =>
-    import("pixelarticons/react").then(({ Folder }) => ({
-      default: Folder,
+    import("raster-react").then(({ FileCodeIcon }) => ({
+      default: FileCodeIcon,
     })),
   ),
   suitcase: lazy(() =>
-    import("pixelarticons/react").then(({ Suitcase }) => ({
-      default: Suitcase,
+    import("raster-react").then(({ FoldersIcon }) => ({
+      default: FoldersIcon,
     })),
   ),
   "mail-right": lazy(() =>
-    import("pixelarticons/react").then(({ MailRight }) => ({
-      default: MailRight,
+    import("raster-react").then(({ MailIcon }) => ({
+      default: MailIcon,
     })),
   ),
   moon: lazy(() =>
-    import("pixelarticons/react").then(({ Moon }) => ({
-      default: Moon,
+    import("raster-react").then(({ MoonIcon }) => ({
+      default: MoonIcon,
+    })),
+  ),
+  sun: lazy(() =>
+    import("raster-react").then(({ SunIcon }) => ({
+      default: SunIcon,
     })),
   ),
 } as const;
+// import { Heart } from 'raster-react';
