@@ -11,13 +11,13 @@ const listMenu: MenuItemProps[] = [
 
 export function Sidebar() {
   return (
-    <nav className="h-full flex items-center justify-center relative">
+    <nav className="h-full flex items-center justify-center relative bg-sidebar-background">
       <div className="absolute top-2">
         <ToogleTheme />
       </div>
-      <ul className="flex flex-col items-center gap-10">
+      <ul className="flex flex-col items-center gap-2">
         {listMenu.map((item, index) => (
-          <li key={`${item.name}-menu-item-${index}`}>
+          <li key={`${item.name}-menu-item-${index}`} className="w-full">
             <MenuItem
               name={item.name}
               iconName={item.iconName}

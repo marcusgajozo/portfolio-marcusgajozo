@@ -11,7 +11,10 @@ export interface MenuItemProps {
 
 export function MenuItem({ name, iconName, url }: MenuItemProps) {
   return (
-    <Link href={url} className="flex flex-col items-center gap-1">
+    <Link
+      href={url}
+      className="flex flex-col items-center gap-1 px-2 py-2 border-r-4 border-primary flex-1"
+    >
       <Icon name={iconName} />
       {name}
     </Link>
