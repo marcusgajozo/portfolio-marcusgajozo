@@ -1,12 +1,12 @@
 import { Icon } from "@/components/icon";
-import { PublicRoutes } from "@/enums/routes";
+import { PUBLIC_ROUTES } from "@/constants/routes";
 import Link from "next/link";
 import { ComponentProps } from "react";
 
 export interface MenuItemProps {
   name: string;
   iconName: ComponentProps<typeof Icon>["name"];
-  url: PublicRoutes;
+  url: (typeof PUBLIC_ROUTES)[keyof typeof PUBLIC_ROUTES];
 }
 
 export function MenuItem({ name, iconName, url }: MenuItemProps) {
