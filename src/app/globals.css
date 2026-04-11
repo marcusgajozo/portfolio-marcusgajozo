@@ -4,20 +4,25 @@
 
 :root {
   --background: #ededed;
-  --foreground: #2c2c2c;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --sidebar-background: #ebebeb;
+  --primary: #384846;
 }
 
 .dark {
   --background: #2c2c2c;
-  --foreground: #ededed;
+  --sidebar-background: #1a1a1a;
 }
+  
+@theme inline {
+  --color-background: var(--background);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-primary: var(--primary);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-jersey-10: var(--font-jersey-10);
+}
+
 
 body {
   background: var(--background);
