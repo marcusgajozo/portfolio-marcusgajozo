@@ -21,4 +21,9 @@ export const listIconsConstant = {
       default: MailRight,
     })),
   ),
+  moon: lazy(() =>
+    import("pixelarticons/react").then(({ Moon }) => ({
+      default: Moon,
+    })),
+  ),
 } as const;
