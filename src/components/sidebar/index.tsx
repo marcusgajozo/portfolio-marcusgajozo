@@ -15,7 +15,7 @@ export function Sidebar() {
       <div className="absolute top-2">
         <ToogleTheme />
       </div>
-      <ul className="flex flex-col items-center gap-2">
+      <ul className="flex flex-col items-center gap-6">
         {listMenu.map((item, index) => (
           <li key={`${item.name}-menu-item-${index}`} className="w-full">
             <MenuItem
