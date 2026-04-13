@@ -88,6 +88,14 @@ export default function Home() {
           </section>
         </div>
       </section>
+      <section className="h-[95%] flex flex-col items-center">
+        <div className="flex flex-col w-[80%]">
+          <h2 className="text-2xl font-bold flex items-center gap-2">
+            <Icon name="file-code" />
+            Projetos
+          </h2>
+        </div>
+      </section>
       <section></section>
     </>
   );
