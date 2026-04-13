@@ -4,7 +4,7 @@ import { ToogleTheme } from "./components/toggle-theme";
 
 const listMenu: MenuItemProps[] = [
   { name: "Home", iconName: "home", url: PUBLIC_ROUTES.HOME },
-  { name: "Projects", iconName: "folder", url: PUBLIC_ROUTES.PROJECTS },
+  { name: "Projects", iconName: "file-code", url: PUBLIC_ROUTES.PROJECTS },
   { name: "Experience", iconName: "suitcase", url: PUBLIC_ROUTES.EXPERIENCE },
   { name: "Contact", iconName: "mail-right", url: PUBLIC_ROUTES.CONTACT },
 ];
