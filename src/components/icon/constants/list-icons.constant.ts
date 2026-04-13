@@ -6,7 +6,7 @@ export const listIconsConstant = {
       default: HomeIcon,
     })),
   ),
-  folder: lazy(() =>
+  "file-code": lazy(() =>
     import("raster-react").then(({ FileCodeIcon }) => ({
       default: FileCodeIcon,
     })),
