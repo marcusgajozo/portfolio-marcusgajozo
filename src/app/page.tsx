@@ -44,7 +44,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[95%] flex flex-col items-center">
+      <section className="flex flex-col items-center">
         <div className="flex flex-col w-[80%]">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             <Icon name="thunder" />
@@ -89,14 +89,14 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section className="h-[95%] flex flex-col items-center">
+      <section className="flex flex-col items-center mt-50">
         <div className="flex flex-col w-[80%]">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             <Icon name="file-code" />
             Projetos
           </h2>
-          <section>
-            <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-2xl">
+          <section className="mt-3 flex gap-3">
+            <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
               <div className="relative w-full aspect-video">
                 <Image
                   src="/ecobrasil-aventura.png"
@@ -114,7 +114,25 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-2xl">
+            <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src="/padflow.png"
+                  alt="PadFlow"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4 flex flex-col gap-2">
+                <h3 className="text-xl font-bold">PadFlow</h3>
+                <p>
+                  Um controlador de áudio web para músicos, com pads contínuos e
+                  uma mesa de efeitos personalizável, controlável remotamente
+                  via smartphone.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
               <div className="relative w-full aspect-video">
                 <Image
                   src="/padflow.png"
@@ -135,7 +153,11 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section></section>
+      <section className="h-[80%] flex flex-col gap-3 mt-10">
+        <h2>Mantenha contato.</h2>
+        Atualmente, sou especialista em Desenvolvimento Front-end . Sinta-se à
+        vontade para entrar em contato e conversarmos mais sobre seus projetos.
+      </section>
     </>
   );
 }
