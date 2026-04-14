@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { Icon } from "@/components/icon";
+import { Footer } from "@/components/footer";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -30,7 +32,10 @@ export default function RootLayout({
         <ThemeProvider>
           <main className="h-full flex-1 flex">
             <Sidebar />
-            <section className="flex-1 overflow-y-auto">{children}</section>
+            <section className="flex-1 overflow-y-auto">
+              {children}
+              <Footer />
+            </section>
           </main>
         </ThemeProvider>
       </body>
