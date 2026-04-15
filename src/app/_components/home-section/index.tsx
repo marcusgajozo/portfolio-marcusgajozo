@@ -1,9 +1,10 @@
 import { Icon } from "@/components/icon";
+import { Section } from "@/components/section";
 import Link from "next/link";
 
 export function HomeSection() {
   return (
-    <section className="h-full flex flex-col items-center justify-center">
+    <Section className="h-[95%] flex flex-col items-center justify-center">
       <div className="flex flex-col">
         <h3 className="text-xl">Olá! Eu sou o</h3>
         <h1 className="text-7xl font-medium tracking-[-0.1rem]">
@@ -41,6 +42,6 @@ export function HomeSection() {
           </Link>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

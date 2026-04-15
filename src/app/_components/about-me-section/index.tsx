@@ -1,14 +1,11 @@
-import { Icon } from "@/components/icon";
+import { Section, SectionHeader } from "@/components/section";
 import Image from "next/image";
 
 export function AboutMeSection() {
   return (
-    <section className="flex justify-center items-center gap-10">
+    <Section className="flex justify-center items-center gap-10">
       <section className="flex flex-col flex-1">
-        <h2 className="text-2xl font-bold flex items-center gap-2">
-          <Icon name="thunder" />
-          Sobre mim
-        </h2>
+        <SectionHeader title="Sobre mim" number={1} />
         <section className="mt-3 flex flex-col gap-3">
           <p>
             Desenvolvedor de software com experiência na construção de sistemas
@@ -46,14 +43,14 @@ export function AboutMeSection() {
           </p>
         </section>
       </section>
-      <section>
+      <div className=" relative rounded-full aspect-video overflow-hidden w-100 h-100">
         <Image
           src="/marcus-gajozo.png"
           alt="Foto de Marcus Gajozo"
-          width={400}
-          height={400}
+          fill
+          className="object-cover"
         />
-      </section>
-    </section>
+      </div>
+    </Section>
   );
 }
