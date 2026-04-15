@@ -1,10 +1,9 @@
+import { Footer } from "@/components/footer";
 import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { Icon } from "@/components/icon";
-import { Footer } from "@/components/footer";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -25,14 +24,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${robotoMono.variable} h-full antialiased`}
+      className={`${robotoMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="h-screen flex flex-col">
+      <body className="h-screen">
         <ThemeProvider>
-          <main className="h-full flex-1 flex">
+          <main className="h-full flex">
             <Sidebar />
-            <section className="flex-1 overflow-y-auto">
+            <section className="h-full overflow-y-auto">
               {children}
               <Footer />
             </section>
