@@ -2,8 +2,11 @@ import { Footer } from "@/components/footer";
 import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Mono, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -24,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${robotoMono.variable} antialiased`}
+      className={cn("antialiased", robotoMono.variable, "font-sans", geist.variable)}
       suppressHydrationWarning
     >
       <body className="h-screen">
