@@ -2,6 +2,9 @@ import { Icon } from "@/components/icon";
 import { Section } from "@/components/section";
 import Image from "next/image";
 
+// TODO: cria um componente card
+// TODO: fazer vídeo/giff para colocar dos projetos
+
 export function ProjectsSection() {
   return (
     <Section className="flex flex-col items-center mt-50">

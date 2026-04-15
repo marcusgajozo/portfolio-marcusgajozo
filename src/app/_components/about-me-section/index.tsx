@@ -1,6 +1,8 @@
 import { Section, SectionHeader } from "@/components/section";
 import Image from "next/image";
 
+// TODO: add bandeira do brasil
+
 export function AboutMeSection() {
   return (
     <Section className="flex justify-center items-center gap-10">
