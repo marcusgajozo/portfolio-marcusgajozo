@@ -1,23 +1,19 @@
-import { PublicRoutes } from "@/enums/routes";
+import { PUBLIC_ROUTES } from "@/constants/routes";
 import { MenuItem, MenuItemProps } from "./components/menu-item";
 import { ToogleTheme } from "./components/toggle-theme";
 
 const listMenu: MenuItemProps[] = [
-  { name: "Home", iconName: "home", url: PublicRoutes.Home },
-  { name: "Projects", iconName: "folder", url: PublicRoutes.Projects },
-  { name: "Experience", iconName: "suitcase", url: PublicRoutes.Experience },
-  { name: "Contact", iconName: "mail-right", url: PublicRoutes.Contact },
+  { name: "Home", iconName: "home", url: PUBLIC_ROUTES.HOME },
+  { name: "Projetos", iconName: "suitcase", url: PUBLIC_ROUTES.PROJECTS },
+  { name: "Artigos", iconName: "file-code", url: PUBLIC_ROUTES.EXPERIENCE },
 ];
 
 export function Sidebar() {
   return (
-    <nav className="h-full flex items-center justify-center relative bg-sidebar-background">
-      <div className="absolute top-2">
-        <ToogleTheme />
-      </div>
-      <ul className="flex flex-col items-center gap-2">
+    <nav className="relative flex w-full items-center justify-between bg-sidebar-background p-4 md:h-full md:w-24 md:flex-col md:justify-center md:p-0">
+      <ul className="flex flex-row items-center gap-4 md:flex-col md:gap-6">
         {listMenu.map((item, index) => (
-          <li key={`${item.name}-menu-item-${index}`} className="w-full">
+          <li key={`${item.name}-menu-item-${index}`} className="md:w-full">
             <MenuItem
               name={item.name}
               iconName={item.iconName}
@@ -26,6 +22,10 @@ export function Sidebar() {
           </li>
         ))}
       </ul>
+
+      <div className="md:absolute md:top-4">
+        <ToogleTheme />
+      </div>
     </nav>
   );
 }

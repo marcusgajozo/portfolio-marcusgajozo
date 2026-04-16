@@ -1,6 +1,8 @@
 import { ComponentProps } from "react";
 import { Icon } from "../icon";
 
+// TODO: Ajustar espaçamento de button para usar no max o tamanho do conteúdo, e não um tamanho fixo
+
 interface ButtonProps extends ComponentProps<"button"> {
   variant?: "primary" | "secondary" | "ghost";
   iconName?: ComponentProps<typeof Icon>["name"];

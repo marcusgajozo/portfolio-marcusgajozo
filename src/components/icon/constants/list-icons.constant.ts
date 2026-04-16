@@ -6,7 +6,7 @@ export const listIconsConstant = {
       default: HomeIcon,
     })),
   ),
-  folder: lazy(() =>
+  "file-code": lazy(() =>
     import("raster-react").then(({ FileCodeIcon }) => ({
       default: FileCodeIcon,
     })),
@@ -31,5 +31,24 @@ export const listIconsConstant = {
       default: SunIcon,
     })),
   ),
+  github: lazy(() =>
+    import("raster-react").then(({ GithubIcon }) => ({
+      default: GithubIcon,
+    })),
+  ),
+  linkedin: lazy(() =>
+    import("raster-react").then(({ LinkedinIcon }) => ({
+      default: LinkedinIcon,
+    })),
+  ),
+  "user-fill": lazy(() =>
+    import("raster-react").then(({ UserFillIcon }) => ({
+      default: UserFillIcon,
+    })),
+  ),
+  thunder: lazy(() =>
+    import("raster-react").then(({ ThunderIcon }) => ({
+      default: ThunderIcon,
+    })),
+  ),
 } as const;
-// import { Heart } from 'raster-react';
