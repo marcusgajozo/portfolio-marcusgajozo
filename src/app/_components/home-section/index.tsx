@@ -11,7 +11,7 @@ export function HomeSection() {
           Marcus Gajozo
         </h1>
         <h3 className="text-xl mt-3">
-          <span className="font-medium">Desenvolvedor de Software</span>, crio
+          <span className="font-medium">Desenvolvedor Full Stack</span>, crio
           aplicações web e mobile resolvendo problemas complexos com código
           limpo e eficiente.
         </h3>
