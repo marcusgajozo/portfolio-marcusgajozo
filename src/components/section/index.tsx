@@ -6,7 +6,7 @@ export function Section({
   ...props
 }: ComponentProps<"section">) {
   return (
-    <section className={`px-25 ${className}`} {...props}>
+    <section className={`px-60 ${className}`} {...props}>
       {children}
     </section>
   );
