@@ -2,12 +2,15 @@ import { Section, SectionHeader } from "@/components/section";
 import Image from "next/image";
 
 // TODO: add bandeira do brasil
+interface AboutMeSectionProps {
+  number: number;
+}
 
-export function AboutMeSection() {
+export function AboutMeSection({ number }: AboutMeSectionProps) {
   return (
     <Section className="flex justify-center items-center gap-10">
       <section className="flex flex-col flex-1">
-        <SectionHeader title="Sobre mim" number={1} />
+        <SectionHeader title="Sobre mim" number={number} />
         <section className="mt-3 flex flex-col gap-3">
           <p>
             Desenvolvedor de software com experiência na construção de sistemas
