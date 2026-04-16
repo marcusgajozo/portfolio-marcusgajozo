@@ -12,7 +12,10 @@ export function ProjectsSection({ number }: ProjectsSectionProps) {
   return (
     <Section className="flex flex-col items-center mt-50">
       <div className="flex flex-col">
-        <SectionHeader title="Projetos" number={number} />
+        <SectionHeader
+          title="Engenharia e Projetos Open source"
+          number={number}
+        />
         <section className="mt-3 flex gap-3">
           <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
             <div className="relative w-full aspect-video">
