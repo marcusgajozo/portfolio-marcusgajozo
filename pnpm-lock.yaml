@@ -50,9 +50,6 @@ importers:
       tailwind-merge:
         specifier: ^3.5.0
         version: 3.5.0
-      three:
-        specifier: ^0.167.1
-        version: 0.167.1
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
