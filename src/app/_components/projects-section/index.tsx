@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // TODO: cria um componente card
 // TODO: fazer vídeo/giff para colocar dos projetos
+// TODO: criar rota para projetos e pesquisa de projetos
 
 interface ProjectsSectionProps {
   number: number;
@@ -16,7 +17,7 @@ export function ProjectsSection({ number }: ProjectsSectionProps) {
           title="Engenharia e Projetos Open source"
           number={number}
         />
-        <section className="mt-3 flex gap-3">
+        <section className="mt-3 flex flex-wrap gap-3">
           <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
             <div className="relative w-full aspect-video">
               <Image

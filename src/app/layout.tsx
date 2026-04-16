@@ -36,11 +36,11 @@ export default function RootLayout({
       )}
       suppressHydrationWarning
     >
-      <body className="h-screen">
+      <body className="h-screen overflow-hidden">
         <ThemeProvider>
-          <main className="h-full flex">
+          <main className="flex h-full flex-col md:flex-row">
             <Sidebar />
-            <section className="h-full overflow-y-auto">
+            <section className="flex-1 overflow-y-auto">
               {children}
               <Footer />
             </section>

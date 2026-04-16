@@ -1,17 +1,16 @@
 import { Section, SectionHeader } from "@/components/section";
 import Image from "next/image";
 
-// TODO: add bandeira do brasil
 interface AboutMeSectionProps {
   number: number;
 }
 
 export function AboutMeSection({ number }: AboutMeSectionProps) {
   return (
-    <Section className="flex justify-center items-center gap-10">
-      <section className="flex flex-col flex-1">
+    <Section className="flex flex-wrap justify-center items-center gap-10 p-5 pt-10">
+      <section className="flex flex-col flex-1 max-w-xl">
         <SectionHeader title="Sobre mim" number={number} />
-        <section className="mt-3 flex flex-col gap-3">
+        <section className="mt-3 flex flex-col gap-3 leading-relaxed">
           <p>
             Desenvolvedor de software com experiência na construção de sistemas
             governamentais e aplicações web de alta performance. Especializado
@@ -48,13 +47,23 @@ export function AboutMeSection({ number }: AboutMeSectionProps) {
           </p>
         </section>
       </section>
-      <div className=" relative rounded-full aspect-video overflow-hidden w-100 h-100">
-        <Image
-          src="/marcus-gajozo.png"
-          alt="Foto de Marcus Gajozo"
-          fill
-          className="object-cover"
-        />
+      <div className="relative shrink-0 w-56 h-56 sm:w-80 sm:h-80">
+        <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg border-2 border-slate-700">
+          <Image
+            src="/marcus-gajozo.png"
+            alt="Foto de Marcus Gajozo"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute -bottom-2 -right-2 w-16 h-10 overflow-hidden rounded shadow-xl border-4 border-[#121212]">
+          <Image
+            src="/flag-brazil.svg"
+            alt="Bandeira do Brasil"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </Section>
   );
