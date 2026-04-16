@@ -12,15 +12,16 @@ export function Section({
   );
 }
 
-export const SectionHeader = ({
-  title,
-  number,
-}: {
+interface SectionHeaderProps {
   title: string;
   number: number;
-}) => (
-  <h2 className="text-2xl font-bold">
-    <span className="text-sm mr-1">0{number}.</span>
-    {title}
-  </h2>
-);
+}
+
+export function SectionHeader({ title, number }: SectionHeaderProps) {
+  return (
+    <h2 className="text-2xl font-bold">
+      <span className="text-sm mr-1">0{number}.</span>
+      {title}
+    </h2>
+  );
+}
