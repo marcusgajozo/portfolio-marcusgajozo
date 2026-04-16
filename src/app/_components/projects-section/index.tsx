@@ -1,18 +1,18 @@
-import { Icon } from "@/components/icon";
-import { Section } from "@/components/section";
+import { Section, SectionHeader } from "@/components/section";
 import Image from "next/image";
 
 // TODO: cria um componente card
 // TODO: fazer vídeo/giff para colocar dos projetos
 
-export function ProjectsSection() {
+interface ProjectsSectionProps {
+  number: number;
+}
+
+export function ProjectsSection({ number }: ProjectsSectionProps) {
   return (
     <Section className="flex flex-col items-center mt-50">
       <div className="flex flex-col">
-        <h2 className="text-2xl font-bold flex items-center gap-2">
-          <Icon name="file-code" />
-          Projetos
-        </h2>
+        <SectionHeader title="Projetos" number={number} />
         <section className="mt-3 flex gap-3">
           <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-md">
             <div className="relative w-full aspect-video">
