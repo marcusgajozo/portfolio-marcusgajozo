@@ -33,7 +33,7 @@ export function ArticlesSection({ number }: ArticlesSectionProps) {
   return (
     <Section className="mt-20">
       <SectionHeader title="Artigos e tutoriais" number={number} />
-      <section className="mt-5 flex flex-wrap justify-between items-center gap-2 w-full">
+      <section className="mt-5 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <ArticleCard
             key={article.title}
@@ -55,7 +55,7 @@ interface ArticleCardProps {
 
 function ArticleCard({ title, description, link }: ArticleCardProps) {
   return (
-    <div className="min-w-0 w-full md:max-w-100 border rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+    <div className="min-w-0 w-full border rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
       <div className="flex flex-col p-3 gap-2 ">
         <h3 className="font-bold text-xl">{title}</h3>
         <p className="line-clamp-2 leading-6 text-sm">{description}</p>
