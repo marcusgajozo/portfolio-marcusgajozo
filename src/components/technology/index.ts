@@ -1,1 +1,0 @@
-export { Technology } from "./technology";

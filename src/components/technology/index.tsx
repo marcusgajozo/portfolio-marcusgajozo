@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { technologyIcons, technologyNames } from "./technology.constant";
 import { Suspense } from "react";
+import { technologyUrls } from "./constants/technology-urls.constant";
+import { technologyIcons } from "./constants/technology-icons.constant";
+import { technologyNames } from "./constants/technology-names.constant";
 
 interface TechnologyProps {
-  url: string;
   technologyName: keyof typeof technologyIcons;
 }
 
-export function Technology({ url, technologyName }: TechnologyProps) {
+export function Technology({ technologyName }: TechnologyProps) {
   const Icon = technologyIcons[technologyName];
   const name = technologyNames[technologyName];
+  const url = technologyUrls[technologyName];
 
   return (
     <Link href={url} target="_blank" className="flex items-center gap-2 w-20">
