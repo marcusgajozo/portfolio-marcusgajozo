@@ -12,14 +12,14 @@ export function Section({
   );
 }
 
-interface SectionHeaderProps {
+interface SectionHeaderProps extends ComponentProps<"h2"> {
   title: string;
   number: number;
 }
 
-export function SectionHeader({ title, number }: SectionHeaderProps) {
+export function SectionHeader({ title, number, ...props }: SectionHeaderProps) {
   return (
-    <h2 className="text-2xl font-bold">
+    <h2 className="text-2xl font-bold" {...props}>
       <span className="text-sm mr-1">0{number}.</span>
       {title}
     </h2>
