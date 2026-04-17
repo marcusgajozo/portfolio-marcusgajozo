@@ -17,7 +17,7 @@ export function ProjectsSection({ number }: ProjectsSectionProps) {
         title="Engenharia e Projetos Open source"
         number={number}
       />
-      <section className="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <ProjectCard />
         <ProjectCard />
       </section>
@@ -27,7 +27,7 @@ export function ProjectsSection({ number }: ProjectsSectionProps) {
 
 function ProjectCard() {
   return (
-    <div className="flex flex-col gap-2 mt-3 border-2 rounded-lg overflow-hidden w-full">
+    <div className="flex flex-col gap-2 border-2 rounded-lg overflow-hidden w-full">
       <div className="relative w-full aspect-video">
         <Image
           src="/ecobrasil-aventura.png"

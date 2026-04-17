@@ -33,7 +33,7 @@ export function ArticlesSection({ number }: ArticlesSectionProps) {
   return (
     <Section className="mt-20">
       <SectionHeader title="Artigos e tutoriais" number={number} />
-      <section className="mt-5 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <ArticleCard
             key={article.title}

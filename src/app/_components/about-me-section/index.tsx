@@ -7,10 +7,10 @@ interface AboutMeSectionProps {
 
 export function AboutMeSection({ number }: AboutMeSectionProps) {
   return (
-    <Section className="flex flex-wrap justify-center items-center gap-10 p-5 pt-10">
+    <Section className="flex flex-wrap justify-center items-center gap-10">
       <section className="flex flex-col flex-1 max-w-xl">
         <SectionHeader title="Sobre mim" number={number} />
-        <section className="mt-3 flex flex-col gap-3 leading-relaxed">
+        <section className="flex flex-col gap-3 leading-relaxed">
           <p>
             Desenvolvedor de software com experiência na construção de sistemas
             governamentais e aplicações web de alta performance. Especializado
