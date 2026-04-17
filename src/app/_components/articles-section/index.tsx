@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // TODO: cria a rota para ler o artigoId
 // TODO: criar um rota para listar e pesquisar os arquigos
+// TODO: mover esses componentes para a pasta components
 
 interface ArticlesSectionProps {
   number: number;
@@ -31,7 +32,7 @@ const articles: ArticleCardProps[] = [
 
 export function ArticlesSection({ number }: ArticlesSectionProps) {
   return (
-    <Section className="mt-20">
+    <Section className="mt-30">
       <SectionHeader title="Artigos e tutoriais" number={number} />
       <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (

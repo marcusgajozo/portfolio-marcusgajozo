@@ -12,7 +12,7 @@ interface ProjectsSectionProps {
 
 export function ProjectsSection({ number }: ProjectsSectionProps) {
   return (
-    <Section className="mt-50">
+    <Section className="mt-30">
       <SectionHeader
         title="Engenharia e Projetos Open source"
         number={number}
