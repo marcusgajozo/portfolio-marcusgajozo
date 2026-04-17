@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { technologyUrls } from "./constants/technology-urls.constant";
 import { technologyIcons } from "./constants/technology-icons.constant";
 import { technologyNames } from "./constants/technology-names.constant";
+import { technologyUrls } from "./constants/technology-urls.constant";
 
 interface TechnologyProps {
   technologyName: keyof typeof technologyIcons;
