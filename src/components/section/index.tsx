@@ -19,7 +19,7 @@ interface SectionHeaderProps extends ComponentProps<"h2"> {
 
 export function SectionHeader({ title, number, ...props }: SectionHeaderProps) {
   return (
-    <h2 className="text-2xl font-bold" {...props}>
+    <h2 className="text-2xl font-bold mb-4" {...props}>
       <span className="text-sm mr-1">0{number}.</span>
       {title}
     </h2>
