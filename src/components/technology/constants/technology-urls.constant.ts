@@ -30,4 +30,7 @@ export const technologyUrls: Record<keyof typeof technologyIcons, string> = {
   nestjs: "https://nestjs.com/",
   react: "https://reactjs.org/",
   nextjs: "https://nextjs.org/",
+  mongodb: "https://www.mongodb.com/",
+  nodejs: "https://nodejs.org/",
+  redis: "https://redis.io/",
 };

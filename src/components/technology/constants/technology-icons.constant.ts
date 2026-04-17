@@ -146,4 +146,19 @@ export const technologyIcons = {
       default: SiGooglecloud,
     })),
   ),
+  mongodb: lazy(() =>
+    import("react-icons/si").then(({ SiMongodb }) => ({
+      default: SiMongodb,
+    })),
+  ),
+  redis: lazy(() =>
+    import("react-icons/si").then(({ SiRedis }) => ({
+      default: SiRedis,
+    })),
+  ),
+  nodejs: lazy(() =>
+    import("react-icons/si").then(({ SiNodedotjs }) => ({
+      default: SiNodedotjs,
+    })),
+  ),
 } as const;

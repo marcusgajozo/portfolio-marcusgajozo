@@ -30,4 +30,7 @@ export const technologyNames: Record<keyof typeof technologyIcons, string> = {
   nestjs: "NestJS",
   react: "React",
   nextjs: "Next.js",
+  mongodb: "MongoDB",
+  nodejs: "Node.js",
+  redis: "Redis",
 } as const;
