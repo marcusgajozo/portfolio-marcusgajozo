@@ -1,6 +1,7 @@
 import { Section, SectionHeader } from "@/components/section";
 import { Technology } from "@/components/technology";
 
+// TODO: ajusta a lista de tecnologias
 interface HardSkillSectionProps {
   number: number;
 }
