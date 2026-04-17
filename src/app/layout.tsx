@@ -1,12 +1,11 @@
 import { Footer } from "@/components/footer";
 import { Sidebar } from "@/components/sidebar";
+import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
-import { Roboto_Mono, Geist } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
+import { PropsWithChildren } from "react";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -20,23 +19,14 @@ export const metadata: Metadata = {
     "Portfólio de Marcus Gajozo, desenvolvedor full stack e entusiasta de tecnologia. Explore meus projetos, artigos e contribuições para a comunidade de código aberto.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       lang="en"
-      className={cn(
-        "antialiased",
-        robotoMono.variable,
-        "font-sans",
-        geist.variable,
-      )}
+      className={cn("antialiased", robotoMono.variable, "font-sans")}
       suppressHydrationWarning
     >
-      <body className="h-screen overflow-hidden">
+      <body className="h-screen">
         <ThemeProvider>
           <main className="flex h-full flex-col md:flex-row">
             <Sidebar />

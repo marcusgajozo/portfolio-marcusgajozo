@@ -7,10 +7,10 @@ interface AboutMeSectionProps {
 
 export function AboutMeSection({ number }: AboutMeSectionProps) {
   return (
-    <Section className="flex flex-wrap justify-center items-center gap-10 p-5 pt-10">
-      <section className="flex flex-col flex-1 max-w-xl">
-        <SectionHeader title="Sobre mim" number={number} />
-        <section className="mt-3 flex flex-col gap-3 leading-relaxed">
+    <Section>
+      <SectionHeader title="Sobre mim" number={number} />
+      <section className="flex flex-wrap justify-center items-center gap-10">
+        <section className="flex flex-col flex-1 gap-3 leading-relaxed">
           <p>
             Desenvolvedor de software com experiência na construção de sistemas
             governamentais e aplicações web de alta performance. Especializado
@@ -46,25 +46,25 @@ export function AboutMeSection({ number }: AboutMeSectionProps) {
             Cloud.
           </p>
         </section>
+        <div className="relative shrink-0 w-56 h-56 sm:w-80 sm:h-80">
+          <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg">
+            <Image
+              src="/marcus-gajozo.png"
+              alt="Foto de Marcus Gajozo"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-2 -right-2 sm:right-2 sm:bottom-2 w-16 h-10 overflow-hidden rounded shadow-xl">
+            <Image
+              src="/flag-brazil.svg"
+              alt="Bandeira do Brasil"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
       </section>
-      <div className="relative shrink-0 w-56 h-56 sm:w-80 sm:h-80">
-        <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg border-2 border-slate-700">
-          <Image
-            src="/marcus-gajozo.png"
-            alt="Foto de Marcus Gajozo"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute -bottom-2 -right-2 w-16 h-10 overflow-hidden rounded shadow-xl border-4 border-[#121212]">
-          <Image
-            src="/flag-brazil.svg"
-            alt="Bandeira do Brasil"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
     </Section>
   );
 }

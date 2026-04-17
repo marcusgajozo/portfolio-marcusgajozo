@@ -1,46 +1,38 @@
-import { LogoItem, LogoLoop } from "@/components/logo-loop";
 import { Section, SectionHeader } from "@/components/section";
-import {
-  SiNextdotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+import { Technology } from "@/components/technology";
+import { technologyIcons } from "@/components/technology/constants/technology-icons.constant";
+
+// TODO: ajustar espaçamentos entre as skills
 
 interface HardSkillSectionProps {
   number: number;
 }
 
-const techLogos: LogoItem[] = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  {
-    node: <SiTypescript />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
-  },
-  {
-    node: <SiTailwindcss />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
+const hardSkills: (keyof typeof technologyIcons)[] = [
+  "apollo",
+  "docker",
+  "express",
+  "git",
+  "graphql",
+  "jest",
+  "mongodb",
+  "nestjs",
+  "nodejs",
+  "postgresql",
+  "react",
+  "redis",
+  "typescript",
 ];
 
 export function HardSkillSection({ number }: HardSkillSectionProps) {
   return (
-    <Section>
-      <SectionHeader title="Hard Skill" number={number} />
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
-        direction="right"
-        logoHeight={30}
-        gap={60}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        ariaLabel="Technology partners"
-      />
+    <Section className="mt-30">
+      <SectionHeader title="Habilidades" number={number} />
+      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-4">
+        {hardSkills.map((skill, index) => (
+          <Technology key={`skill-${index}-${skill}`} technologyName={skill} />
+        ))}
+      </section>
     </Section>
   );
 }

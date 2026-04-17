@@ -2,6 +2,8 @@ import { PUBLIC_ROUTES } from "@/constants/routes";
 import { MenuItem, MenuItemProps } from "./components/menu-item";
 import { ToogleTheme } from "./components/toggle-theme";
 
+// TODO: ajustar styles dos itens do menu
+
 const listMenu: MenuItemProps[] = [
   { name: "Home", iconName: "home", url: PUBLIC_ROUTES.HOME },
   { name: "Projetos", iconName: "suitcase", url: PUBLIC_ROUTES.PROJECTS },
